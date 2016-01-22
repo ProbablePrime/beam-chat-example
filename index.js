@@ -23,7 +23,7 @@ beam.use('password', {
     return socket.call('auth', [channelID, userID, data.authkey]);
 }).then(function(){
     console.log('You are now authenticated!');
-    ocket.on('ChatMessage', function (data) {
+    socket.on('ChatMessage', function (data) {
         console.log('We got a ChatMessage packet!');
         console.log(data);
         console.log('Message is in data.message.message');
