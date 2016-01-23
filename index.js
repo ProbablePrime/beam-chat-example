@@ -22,7 +22,7 @@ beam.use('password', {
     socket = new BeamSocket(data.endpoints).boot();
     return socket.call('auth', [channelID, userID, data.authkey]);
 }).then(function(){
-    console.log('You are now authenticated!');
+    console.log('You are now authenticated to https://beam.pro/');
     socket.on('ChatMessage', function (data) {
         console.log('We got a ChatMessage packet!');
         console.log(data);
